@@ -1,10 +1,15 @@
 #!/bin/sh
+# -*-Shell-script-*-
+#
 #/**
 # * Title    : Memcached init script for EC solution
 # * Auther   : by Alex, Lee
 # * Created  : 07-25-2018
 # * Modified : 04-25-2019
 #**/
+#
+#set -e
+#set -x
 
 # Check that networking is up.
 . /etc/sysconfig/network
@@ -46,7 +51,7 @@ case "$2" in
 esac
 
 # default memcached options 
-_MEMCACHED="/usr/local/bin/memcached"
+_MEMCACHED="/home/memcached/bin/memcached"
 _PID="/var/run/memcached/memcached_${_PORT}.pid"
 _LOCK="/var/lock/subsys/memcached_${_PORT}"
 _USER=memcached-s
