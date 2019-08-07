@@ -6,6 +6,7 @@
 # * Auther   : by Alex, Lee
 # * Created  : 07-25-2018
 # * Modified : 04-25-2019
+# * E-mail   : cine0831@gmail.com
 #**/
 #
 #set -e
