@@ -2,7 +2,7 @@
 # -*-Shell-script-*-
 #
 #/**
-# * Title    : Memcached init script for EC solution
+# * Title    : multiple Memcached init script
 # * Auther   : by Alex, Lee
 # * Created  : 07-25-2018
 # * Modified : 04-25-2019
