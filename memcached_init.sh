@@ -25,24 +25,24 @@ usage() {
 Usage: ${0##*/} [options]
   
 Examples:
-    ${0##*/} {start|stop|restart|status} {11211|11212}
+    ${0##*/} {start|stop|restart|status} {8888|9999}
   
 Description:
-    type: memcached , TCP port: 11211
-    type: memcached , TCP port: 11212
+    type: memcached , TCP port: 8888
+    type: memcached , TCP port: 9999
 "
 }
   
 case "$2" in
-    11211)
-        # TCP 11211
-        _PORT=11211
+    8888)
+        # TCP 8888
+        _PORT=8888
         _CACHESIZE=256
         ;;
   
-    11212)
-        # TCP 11212
-        _PORT=11212
+    9999)
+        # TCP 
+        _PORT=9999
         _CACHESIZE=256
         ;;
     *)
