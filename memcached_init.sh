@@ -76,8 +76,8 @@ version () {
         _ver=$(cat /etc/redhat-release | cut -d'(' -f 1 | cut -d'.' -f 1 | sed -e 's/^ *//g' -e 's/ *$//g')
     fi
 
-    # if CentOS 7
-    if [ "CentOS Linux release 7" = "$_ver" ]; then
+    # if CentOS 7 or 8
+    if [[ "CentOS Linux release 7" = "$_ver" ]] || [[ "CentOS Linux release 8" = "$_ver" ]]; then
         echo ""
     else 
         # Source function library.
@@ -96,7 +96,7 @@ start () {
         chown $_USER /var/run/memcached
     fi
   
-    if [ "CentOS Linux release 7" = "$_ver" ]; then
+    if [[ "CentOS Linux release 7" = "$_ver" ]] || [[ "CentOS Linux release 8" = "$_ver" ]]; then
         $_MEMCACHED -d -l $_LISTEN -p $_PORT -u $_USER -m $_CACHESIZE -c $_MAXCONN -P $_PID -U $_UDP $_OPTIONS
         echo "OK"
     else
